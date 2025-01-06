@@ -1,0 +1,22 @@
+[2025-01-06T15:17:16.315+0000][7][gc] Using G1
+[2025-01-06T15:17:18.399+0000][7][gc,init] Version: 17.0.2+8 (release)
+[2025-01-06T15:17:18.402+0000][7][gc,init] CPUs: 10 total, 6 available
+[2025-01-06T15:17:18.407+0000][7][gc,init] Memory: 16384M
+[2025-01-06T15:17:18.407+0000][7][gc,init] Large Page Support: Disabled
+[2025-01-06T15:17:18.408+0000][7][gc,init] NUMA Support: Disabled
+[2025-01-06T15:17:18.408+0000][7][gc,init] Compressed Oops: Enabled (Zero based)
+[2025-01-06T15:17:18.408+0000][7][gc,init] Heap Region Size: 4M
+[2025-01-06T15:17:18.408+0000][7][gc,init] Heap Min Capacity: 8G
+[2025-01-06T15:17:18.409+0000][7][gc,init] Heap Initial Capacity: 8G
+[2025-01-06T15:17:18.409+0000][7][gc,init] Heap Max Capacity: 8G
+[2025-01-06T15:17:18.409+0000][7][gc,init] Pre-touch: Enabled
+[2025-01-06T15:17:18.409+0000][7][gc,init] Parallel Workers: 6
+[2025-01-06T15:17:18.409+0000][7][gc,init] Concurrent Workers: 2
+[2025-01-06T15:17:18.409+0000][7][gc,init] Concurrent Refinement Workers: 6
+[2025-01-06T15:17:18.409+0000][7][gc,init] Periodic GC: Disabled
+[2025-01-06T15:17:18.416+0000][7][gc,metaspace] CDS archive(s) mapped at: [0x0000000800000000-0x0000000800bd2000-0x0000000800bd2000), size 12394496, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+[2025-01-06T15:17:18.417+0000][7][gc,metaspace] Compressed class space mapped at: 0x0000000800c00000-0x0000000840c00000, reserved size: 1073741824
+[2025-01-06T15:17:18.417+0000][7][gc,metaspace] Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+[2025-01-06T15:17:19.479+0000][7][safepoint   ] Safepoint "ICBufferFull", Time since last: 982731334 ns, Reaching safepoint: 2626958 ns, At safepoint: 141542 ns, Total: 2768500 ns
+[2025-01-06T15:17:20.156+0000][7][safepoint   ] Safepoint "ICBufferFull", Time since last: 678234082 ns, Reaching safepoint: 849667 ns, At safepoint: 6250 ns, Total: 855917 ns
+[2025-01-06T15:17:21.515+0000][7][safepoint   ] Safepoint "Cleanup", Time since last: 1358534251 ns, Reaching safepoint: 502541 ns, At safepoint: 40667 ns, Total: 543208 ns

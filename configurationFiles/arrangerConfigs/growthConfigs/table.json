@@ -1,0 +1,19 @@
+{
+	"table": {
+	  "rowIdFieldName": "straun",
+	  "columns": [
+		{
+		  "canChangeShow": true,
+		  "fieldName": "plasmid",
+		  "show": true,
+		  "sortable": true
+		},
+		{
+		  "canChangeShow": true,
+		  "fieldName": "selectorConc",
+		  "show": true,
+		  "sortable": true
+		}
+	  ]
+	}
+  }
