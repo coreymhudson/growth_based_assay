@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2022 The Ontario Institute for Cancer Research. All rights reserved
+ * Copyright (c) 2024 The Ontario Institute for Cancer Research. All rights reserved
  *
  *  This program and the accompanying materials are made available under the terms of
  *  the GNU Affero General Public License v3.0. You should have received a copy of the
@@ -18,6 +18,7 @@
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
+
 import { ReactElement } from 'react';
 import { Aggregations, QuickSearch, useArrangerTheme } from '@overture-stack/arranger-components';
 import { UseThemeContextProps } from '@overture-stack/arranger-components/dist/types';
@@ -26,7 +27,7 @@ import { StageThemeInterface } from '@/components/theme';
 import { getConfig } from '@/global/config';
 
 const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps => ({
-	callerName: 'GROWTH-Facets',
+	callerName: 'Explorer-Facets',
 	components: {
 		Aggregations: {
 			ActionIcon: {
@@ -159,6 +160,7 @@ const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps
 			fieldNames: 'donors.specimens.submitter_specimen_id',
 			headerTitle: 'Specimen Collector Sample ID',
 			placeholder: 'e.g. AB-12345',
+
 			// components
 			DropDownItems: {
 				css: css`
@@ -210,10 +212,12 @@ const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps
 		},
 	},
 });
+
 const Facets = (): ReactElement => {
 	const { NEXT_PUBLIC_ENABLE_GROWTH_QUICKSEARCH } = getConfig();
 	const theme = useTheme();
 	useArrangerTheme(getAggregationsStyles(theme));
+
 	return (
 		<article
 			css={css`
@@ -232,9 +236,12 @@ const Facets = (): ReactElement => {
 			>
 				Filters
 			</h2>
+
 			{NEXT_PUBLIC_ENABLE_GROWTH_QUICKSEARCH && <QuickSearch />}
+
 			<Aggregations />
 		</article>
 	);
 };
+
 export default Facets;
