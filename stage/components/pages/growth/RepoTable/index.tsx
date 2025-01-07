@@ -82,7 +82,11 @@ const getTableConfigs = ({
 			},
 			DownloadButton: {
 				customExporters,
+<<<<<<< Updated upstream
 				exportSelectedRowsField: 'submission_metadata.submitter_id',
+=======
+				exportSelectedRowsField: 'plasmid', // fieldname found in extended
+>>>>>>> Stashed changes
 				downloadUrl: urlJoin(apiHost, 'download'),
 				label: () => (
 					<>
