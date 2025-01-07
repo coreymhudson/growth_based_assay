@@ -66,7 +66,7 @@ const configsQuery = `
 	}
 `;
 
-const INSTRUMENTRepositoryPage = (): ReactElement => {
+const GrowthRepositoryPage = (): ReactElement => {
 	const theme = useTheme();
 	const [arrangerHasConfig, setArrangerHasConfig] = useState<boolean>(false);
 	const [loadingArrangerConfig, setLoadingArrangerConfig] = useState<boolean>(true);
@@ -91,7 +91,7 @@ const INSTRUMENTRepositoryPage = (): ReactElement => {
 					return setLoadingArrangerConfig(false);
 				}
 
-				throw new Error('Could not validate Arranger Instrument server configuration!');
+				throw new Error('Could not validate Arranger server configuration!');
 			})
 			.catch(async (err) => {
 				console.warn(err);
@@ -99,7 +99,7 @@ const INSTRUMENTRepositoryPage = (): ReactElement => {
 				await sleep(1000);
 				setLoadingArrangerConfig(false);
 			});
-	}, []);
+	}, [NEXT_PUBLIC_ARRANGER_GROWTH_DOCUMENT_TYPE, NEXT_PUBLIC_ARRANGER_GROWTH_INDEX]);
 
 	const ConfigError = getConfigError({
 		hasConfig: arrangerHasConfig,
@@ -160,4 +160,4 @@ const INSTRUMENTRepositoryPage = (): ReactElement => {
 	);
 };
 
-export default GROWTHRepositoryPage;
+export default GrowthRepositoryPage;

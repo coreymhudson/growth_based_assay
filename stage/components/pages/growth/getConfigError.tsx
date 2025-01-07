@@ -18,22 +18,27 @@
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
+
 import { ReactNode } from 'react';
 import { css, useTheme } from '@emotion/react';
+
 import { GenericHelpMessage } from '@/components/DMSAdminContact';
 import StyledLink from '@/components/Link';
 import { Checkmark, Warning } from '@/components/theme/icons';
 import { getConfig } from '@/global/config';
+
 const ArrangerAdminUILink = () => {
-	const { NEXT_PUBLIC_ARRANGER_COMPOSITION_ADMIN_UI } = getConfig();
+	const { NEXT_PUBLIC_ARRANGER_GROWTH_ADMIN_UI } = getConfig();
 	return (
-		<StyledLink href={NEXT_PUBLIC_ARRANGER_COMPOSITION_ADMIN_UI} target="_blank">
+		<StyledLink href={NEXT_PUBLIC_ARRANGER_GROWTH_ADMIN_UI} target="_blank">
 			Arranger Admin UI
 		</StyledLink>
 	);
 };
+
 const ListItem = ({ Icon, value, fieldName }: { Icon?: ReactNode; value: string; fieldName: string }) => {
 	const theme = useTheme();
+
 	return (
 		<li
 			css={css`
@@ -63,9 +68,11 @@ const ListItem = ({ Icon, value, fieldName }: { Icon?: ReactNode; value: string;
 		</li>
 	);
 };
+
 const WarningListItem = ({ fieldName }: { fieldName: string }) => (
 	<ListItem Icon={<Warning size={16} />} fieldName={fieldName} value={'Missing'} />
 );
+
 const getConfigError = ({
 	hasConfig,
 	documentType,
@@ -122,4 +129,5 @@ const getConfigError = ({
 			</ul>
 		</span>
 	);
+
 export default getConfigError;
