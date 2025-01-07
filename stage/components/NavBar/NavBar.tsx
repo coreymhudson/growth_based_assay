@@ -99,7 +99,7 @@ const NavBar = (): ReactElement => {
 								}
 							`}
 						>
-							Prelude Development Portal
+							Align Development Repository
 						</span>
 					</a>
 				</InternalLink>
